@@ -12,4 +12,4 @@ class Employee :
 
 andy = Employee()
 andy.work()
-andy.__sleep
+andy.__sleep()
