@@ -1,4 +1,4 @@
-print("f5a24 黎家暉")
+print("f5a24 黎家暉\n")
 
 student_list = ["F5A:01 何曉婷",
                 "F5A:02 阮麗燕",
@@ -39,14 +39,14 @@ class student :
         self.score = score
 
     def speak(self) :
-        print(f"{self.name} {self.subject}考了{self.score}分")
+        print(f"\n{self.name} {self.subject}考了{self.score}分")
 
 for i in range(26) :
     print(student_list[i])
 
 while True :
 
-    stu = int(input("請輸入你的學號:"))
+    stu = int(input("\n請輸入你的學號:"))
 
     if stu in range(1 , 27) :
 
@@ -57,7 +57,7 @@ while True :
             print(subjuct_list[i])
 
         while True :
-            sub = int(input("請輸入你的科目:"))
+            sub = int(input("\n請輸入你的科目:"))
 
             if sub in range(1 , 13) :
 
@@ -66,22 +66,22 @@ while True :
 
                 while True :
 
-                    sco = float(input("請輸入你的分數:"))
+                    sco = float(input("\n請輸入你的分數:"))
 
                     if sco in range(101) :
 
                         break
 
                     else :
-                        print("這不在0-100分的範圍内")
+                        print("\n這不在0-100分的範圍内")
 
             else :
-                print("沒有這個科目")
+                print("\n沒有這個科目")
             
             break
 
     else :
-        print("沒有這個學號")
+        print("\n沒有這個學號")
 
     break
 
