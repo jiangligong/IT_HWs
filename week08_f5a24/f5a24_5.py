@@ -81,7 +81,7 @@ while True :
             break
 
     else :
-        print("這并不是你的學號")
+        print("沒有這個學號")
 
     break
 
