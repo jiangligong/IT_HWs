@@ -45,14 +45,12 @@ for i in range(26) :
     print(student_list[i])
 
 while True :
-
+    
     stu = int(input("\n請輸入你的學號:"))
-
     if stu in range(1 , 27) :
 
         stu = student_list[stu - 1]
         stu = stu[7:]
-
         for i in range(12) :
             print(subjuct_list[i])
 
@@ -60,29 +58,21 @@ while True :
             sub = int(input("\n請輸入你的科目:"))
 
             if sub in range(1 , 13) :
-
                 sub = subjuct_list[sub - 1]
                 sub = sub[-2:]
-
                 while True :
-
                     sco = float(input("\n請輸入你的分數:"))
-
                     if sco in range(101) :
-
                         break
-
                     else :
                         print("\n這不在0-100分的範圍内")
 
             else :
                 print("\n沒有這個科目")
-            
             break
 
     else :
         print("\n沒有這個學號")
-
     break
 
 student = student(stu , sub , sco)
