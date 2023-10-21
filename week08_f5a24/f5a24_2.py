@@ -4,8 +4,8 @@ class initial_reward:
     def __init__(self):
         self.tree = 4
         self.stone = 2
-        self.iron = 1
-        self.gold = 0
+        self.iron = 2
+        self.gold = 1
         self.diamond = 0
 
 
@@ -15,7 +15,6 @@ class Backpack(initial_reward):
         global backpack_quantity
         super().__init__()
         backpack_quantity = [self.tree, self.stone, self.iron, self.gold, self.diamond]
-
 
 # 顯示背包內的物品
     def backpack(self):
@@ -33,11 +32,11 @@ class Upgrade_tools:
     def tools_up(self):
         print(f"你手上的工具為{hand_tool}")
         print("""
-            1.升為木鎬
-            2.升為石鎬
-            3.升為鐵鎬
-            4.升為金鎬
-            5.升為鑽鎬
+            1.升為木製
+            2.升為石製
+            3.升為鐵製
+            4.升為金製
+            5.升為鑽製
             6.返回目錄
             """)
         
@@ -386,8 +385,8 @@ class Craft:
             start()
 
     def stone_to_iron(self):
-        value = bool(input(f"確定由{backpack[1]}轉換為{backpack[2]}??True/False"))
-        if value == True and backpack_quantity[2] >= 4:
+        value = bool(input(f"確定由{backpack[1]}轉換為{backpack[2]}?? True/False"))
+        if value == True and backpack_quantity[1] >= 4:
             backpack_quantity[1] -= 4
             backpack_quantity[2] += 1
             print(f"你已經成功合成{backpack[2]}")
@@ -396,24 +395,24 @@ class Craft:
             print((f"你手上{backpack[2]}不足或你已取消合成"))
 
     def iron_to_gold(self):
-        value = bool(input(f"確定由{backpack[2]}轉換為{backpack[3]}??True/False"))
+        value = bool(input(f"確定由{backpack[2]}轉換為{backpack[3]}?? True/False"))
         if value == True and backpack_quantity[2] >= 4:
             backpack_quantity[2] -= 4
             backpack_quantity[3] += 1
             print(f"你已經成功合成{backpack[3]}")
             start()
         else:
-            print((f"你手上{backpack[2]}不足或你已取消合成"))
+            print((f"你手上{backpack[3]}不足或你已取消合成"))
 
     def gold_to_diamond(self):
-        value = bool(input(f"確定由{backpack[3]}轉換為{backpack[4]}??True/False"))
+        value = bool(input(f"確定由{backpack[3]}轉換為{backpack[4]}?? True/False"))
         if value == True and backpack_quantity[3] >= 4:
             backpack_quantity[3] -= 4
             backpack_quantity[4] += 1
             print(f"你已經成功合成{backpack[4]}")
             start()
         else:
-            print((f"你手上{backpack[3]}不足或你已取消合成"))
+            print((f"你手上{backpack[4]}不足或你已取消合成"))
 
 
 
@@ -432,7 +431,7 @@ def start():
         exit("拜拜")
     
     elif want_to_do == "2":
-        backpack.backpack()
+        backpack_show.backpack()
 
     elif want_to_do == "3":
         upgrade_tools.tools_up()
@@ -452,7 +451,7 @@ def start():
 
 
 hand_tool = "空手"
-backpack = Backpack()
+backpack_show = Backpack()
 upgrade_tools = Upgrade_tools()
 cut_tree = Cut_tree()
 broke_stone = Break_stone()
