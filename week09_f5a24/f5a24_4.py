@@ -1,7 +1,10 @@
 print("f5a24 黎家暉")
 
-f = open("poem.txt", "r+")
-f.write("白日依山盡，黃河入海流。欲窮千里目，更上一層樓。")
-f.seek(4, 0)
-print(f.readline(12))
-f.close
+f = open("students.txt", "r")
+num = int(input("請輸入你的學號："))
+
+if num >=1 and num <= 26:
+    f.seek((num-1)*15, 0)
+    print(f"你的姓名是{f.readline()[7:]}")
+    
+else: print(f"並沒有{num}這個學號")
