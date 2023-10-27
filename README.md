@@ -6,4 +6,4 @@
 - [week04 函數(Function)與Turtle繪圖](week04_f5a24)
 - [week05 模組 (Module)與套件(Package)的建立與應用](week05_f5a24)
 - [week08 物件導向-Class類的封裝/繼承/多型](week08_f5a24)
-- [week09 檔案處理(File Handling)}(week09_f5a24)
+- [week09 檔案處理(File Handling)](week09_f5a24)
