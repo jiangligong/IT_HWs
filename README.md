@@ -10,3 +10,4 @@
 - [week10 OpenCV初探](week10_f5a24)
 - [week14 OpenCV初探](week14_f5a24)
 - [week15 OpenCV人臉偵測](week15_f5a24)
+- [week16 OpenCV五官偵測(眼睛、鼻子、嘴巴)](week16_f5a24)
